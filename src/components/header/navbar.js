@@ -15,7 +15,7 @@ const Navbaar = () => {
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-F9bJpA5krScy3Fd7J0GrxS2OB-NXW0z5t1UOOJo64W5Z4BhuMtqV9BlZ7zFR1z4c5A&usqp=CAU" alt="logo" />
                     </div>
                     <div className="nav_searchbaar">
-                        <input type="text" name="" placeholder="Search Your Products" />
+                        <input type="text" name="" placeholder="Search Your Products" value="latest mobile phones"/>
                         <div className="search_icon">
                             <SearchIcon id="search"/>
                         </div>
@@ -26,7 +26,7 @@ const Navbaar = () => {
                         <a href="#">Sign in</a>
                     </div>
                     <div className='cart_btn'>
-                    <Badge badgeContent={4} color="primary">
+                    <Badge badgeContent={0} color="primary">
                         <ShoppingCartIcon id="icon" />
                     </Badge>
                     <p>Cart</p>
