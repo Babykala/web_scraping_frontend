@@ -6,6 +6,10 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 064d1f6d647c5aaed46ed699ae040648bf934883
 
 const Navbaar = () => {
     return (
