@@ -6,12 +6,9 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import LogoutIcon from '@mui/icons-material/Logout';
-
 
 const Navbaar = () => {
-  
-   return (
+    return (
         <header>
             <nav>
                 <div className="left">
@@ -27,7 +24,7 @@ const Navbaar = () => {
                 </div>
                 <div className="right">
                     <div className="nav_btn">
-                        <a href="">Sign in</a>
+                        <a href="#">Sign in</a>
                     </div>
                     <div className='cart_btn'>
                     <Badge badgeContent={4} color="primary">
