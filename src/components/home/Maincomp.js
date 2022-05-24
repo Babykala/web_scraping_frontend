@@ -2,8 +2,9 @@
 import React from 'react'
 import "../home/home.css";
 import { useState} from "react";
-import { products } from './productdata';
+//import { products } from './productdata';
 import { Rating} from '@mui/material';
+import axios from 'axios';
 
 
 const Maincomp = () => {
@@ -11,9 +12,9 @@ const Maincomp = () => {
     const [prod, setProd] = useState("");
     React.useEffect(() => {
         const res = async () => {
-            await fetch("/get")
-                .then(resp=>resp.json())
-                .then(data=>setProd(data))
+            let resp=await axios.get("/get");
+                console.log(resp.data)
+                setProd(resp.data)
             };
         res();
     }, []);
@@ -26,8 +27,7 @@ const Maincomp = () => {
                         <div className='head'>RESULTS</div>
                         <hr/>
                         <div>
-                            {!prod?"Loading":
-                                prod.map((e) => {
+                            {!prod?"Loading.....":prod.map((e) => {
                                     return (
                                         <div className="products_section" >
                                             <div className="products_items">
@@ -47,6 +47,7 @@ const Maincomp = () => {
                                         </div>
                                     )
                                 })
+                                
                             }
 
                         </div>
