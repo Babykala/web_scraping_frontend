@@ -12,7 +12,7 @@ const Maincomp = () => {
     const [prod, setProd] = useState("");
     React.useEffect(() => {
         const res = async () => {
-            let resp=await axios.get("/get");
+            let resp=await axios.get("https://web-scraping-amazon-db.herokuapp.com/get");
                 console.log(resp.data)
                 setProd(resp.data)
             };
@@ -27,8 +27,7 @@ const Maincomp = () => {
                         <div className='head'>RESULTS</div>
                         <hr/>
                         <div>
-                            {!prod?"Loading....."
-                                    products.map((e) => {
+                            {prod.map((e) => {
                                     return (
                                         <div className="products_section" >
                                             <div className="products_items">
