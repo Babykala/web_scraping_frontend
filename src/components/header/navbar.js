@@ -6,6 +6,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
 const Navbaar = () => {
     return (
         <header>
@@ -15,7 +16,7 @@ const Navbaar = () => {
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-F9bJpA5krScy3Fd7J0GrxS2OB-NXW0z5t1UOOJo64W5Z4BhuMtqV9BlZ7zFR1z4c5A&usqp=CAU" alt="logo" />
                     </div>
                     <div className="nav_searchbaar">
-                        <input type="text" name="" placeholder="Search Your Products" value="latest mobile phones"/>
+                        <input type="text" name="" placeholder="Search Your Products" value="latest electronic products"/>
                         <div className="search_icon">
                             <SearchIcon id="search"/>
                         </div>
@@ -23,7 +24,7 @@ const Navbaar = () => {
                 </div>
                 <div className="right">
                     <div className="nav_btn">
-                        <a href="#">Sign in</a>
+                        <a href="/">Sign in</a>
                     </div>
                     <div className='cart_btn'>
                     <Badge badgeContent={0} color="primary">
