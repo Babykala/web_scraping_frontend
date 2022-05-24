@@ -2,7 +2,7 @@
 import React from 'react'
 import "../home/home.css";
 import { useState} from "react";
-import { products } from './productdata';
+//import { products } from './productdata';
 import { Rating} from '@mui/material';
 import axios from 'axios';
 
@@ -13,12 +13,12 @@ const Maincomp = () => {
     React.useEffect(() => {
         const res = async () => {
             let resp=await axios.get("https://web-scraping-amazon-db.herokuapp.com/get");
-                console.log(resp.data)
+            console.log(resp.data)
                 setProd(resp.data)
             };
         res();
     }, []);
-    console.log(prod)
+   
     return (
         <>
             <div>
@@ -27,7 +27,7 @@ const Maincomp = () => {
                         <div className='head'>RESULTS</div>
                         <hr/>
                         <div>
-                            {prod.map((e) => {
+                            {!prod?"Loading...":prod.map((e) => {
                                     return (
                                         <div className="products_section" >
                                             <div className="products_items">
@@ -41,13 +41,6 @@ const Maincomp = () => {
                                                 <button style={{ color:"white",backgroundColor:"red"}}>Limited time Deal</button>
                                                 <span className="products_price" style={{ color:"red",fontSize:'Large' }}>₹{e.price}</span>
                                                 
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    )
-                                })
-                                
                                                 </div>
                                             </div>
 
