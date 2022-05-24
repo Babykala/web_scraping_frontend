@@ -48,20 +48,6 @@ const Maincomp = () => {
                                     )
                                 })
                                 
-                                    :prod.map((e) => {
-                                    return (
-                                        <div className="products_section" >
-                                            <div className="products_items">
-                                                <div className="product_img">
-                                                    <img src={e.image} alt="product" />
-                                                </div>
-                                                <div>
-                                                <span className="products_name" style={{fontSize:'Large' }}>{e.name}</span>
-                                                <Rating value={4} size="large" />
-                                                <span>{e.rating}</span>
-                                                <button style={{ color:"white",backgroundColor:"red"}}>Limited time Deal</button>
-                                                <span className="products_price" style={{ color:"red",fontSize:'Large' }}>₹{e.price}</span>
-                                                
                                                 </div>
                                             </div>
 
